@@ -1,0 +1,70 @@
+
+<head>
+	<title>Validity Evaluator</title>
+</head>
+
+<script type="application/javascript" src="tautology.js"></script>
+
+<style type="text/css">
+
+:root {
+	--accent: #C3D9FF;
+	--accent2: #FFCBC3;
+	--accent3: #C3FFEB;
+	--max-width:170px;
+}
+
+body {
+	font-family: Consolas, sans-serif;
+	font-size:12px;
+}
+
+#container {
+	max-width: var(--max-width);
+}
+
+#instructions {
+	background-color: var(--accent3);
+	padding:10px;
+}
+
+#formwrapper {
+	padding:10px;
+	background-color: var(--accent);
+}
+
+#result {
+	max-width: var(--max-width);
+	padding:10px;
+	background-color: var(--accent2);
+}
+
+
+</style>
+
+<body>
+	<div id = "container">
+		<div id = "instructions">
+			<p>Only sentence letters (P-Z) are allowed. Supports up to 4 sentence letters.
+				<br>Express negations as !, conjunctions as &, disjunctions as |, conditionals as >, and biconditionals as =.
+				<br>If the results don't update approrpriately, consider refreshing the page. Please Facebook me if you find bugs.
+			</p>
+		</div>
+		<div id="formwrapper">
+			<form id = "form" onsubmit="return validity();">
+				<input id='premise1' type='text' placeholder="Premise 1"></input><br />
+				<input id='premise2' type='text' placeholder="Premise 2"></input><br />
+				<input id='premise3' type='text' placeholder="Premise 3"></input><br />
+				<input id='premise4' type='text' placeholder="Premise 4"></input>
+				<p>
+					<input id='conc' type='text' placeholder="Conclusion (required)" required></input>
+				</p>
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+			</form>
+		</div>
+		<div id = "result"></div>
+		<p>Made by Jessica Cheng. This was my first attempt at a JavaScript program, using something I built on top of the C++ infix-to-postfix function I had to write for CS31 last year. </p>
+	</div>
+</body>
+
