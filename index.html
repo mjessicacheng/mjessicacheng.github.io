@@ -5,7 +5,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
 
+
 <link rel="stylesheet" href="content.css">
+<link rel="stylesheet" href="cube.css">
 
 <script type="text/javascript" src="nav.js"></script>
 
@@ -23,43 +25,25 @@
 <div id="top"></div>
 <div id="bottom"></div>
 
-<div id="content">
-  <div class="textbox">
-    <h1>Hey, I'm Jessica!</h1>
-    <p>I'm a junior computer science student at UCLA. I do research on the Java Virtual Machine at my university, and have experience in project management. My technical breadth for my major is in philosophical logic, and I'm a former course reader for a lower-division logic class at UCLA. I also help run our school's tax club!</p>
-    <p>In my spare time, I develop websites (like this one!), draw, and think about language.</p>
-    <p>I made this website just to have some fun; check out my LinkedIn for more information!</p>
-  </div>
-</div>
-
 <div id="sidebar">
 
   <div class = "holder">
     <div class="container">
-      <div id="cube" class ="spinning"> <!--not unreal-->
-        <figure class="front">jessica</figure>
+      <div id="cube" onmouseover="mouseon()" onmouseout="mouseoff()">
+        <figure class="front">hover</figure>
         <figure class="back"></figure>
-        <figure class="right"></figure>
-        <figure class="left"><table style="text-align:center;line-height:16px;height:100%;"><tr><td>awards & publications</td></tr></table></figure>
-        <figure class="top">work</figure>
-        <figure class="bottom">contact</figure>
+        <figure class="right"><a href="about.html">about</a></figure>
+        <figure class="left"><a href="https://www.linkedin.com/in/mjessicacheng/">LinkedIn</a></figure>
+        <figure class="top"></figure>
+        <figure class="bottom"></figure>
 
       </div>
 
-
-    </div>
-
-    <div class = "links">
-      <a href="/" onmouseover="one()" onmouseout="mouseoff()">01</a>
-      <a href="work.html" onmouseover="five()" onmouseout="mouseoff()">02</a>
-      <!--<a href="#"onmouseover="three()" onmouseout="mouseoff()">03</a>-->
-      <a href="publications.html" onmouseover="four()" onmouseout="mouseoff()">03</a>
-      <!--<a href="" onmouseover="two()" onmouseout="mouseoff()">03</a>-->
-      <a href="contact.html" onmouseover="six()" onmouseout="mouseoff()">04</a>
     </div>
 
   </div> <!--end holder-->
 </div>
+
 
 </body>
 
