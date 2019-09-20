@@ -58,16 +58,15 @@ ul {
   line-height:25px;
 }
 
-#content .areyoukiddingme {
+#content .textbox {
   background-color:rgba(177,250,213,0.75);
   width:500px;
-  padding:10px 30px 50px 30px;
-  opacity:0;
+  padding:10px 30px 30px 30px;
   transition:0.5s ease-in-out;
   text-align:justify;
 }
 
-#content .yeah {
+#content .textbox::after {
   z-index: -10 !important; 
   content: " ";
   position: absolute;
@@ -77,7 +76,6 @@ ul {
   height:350px;
   background-color: rgba(177,178,250,0.6);
   transform: rotate(-10deg);
-  opacity:0;
   transition:0.5s ease-in-out;
 }
 
@@ -101,7 +99,7 @@ ul {
   top: 50%;
   margin-top:-100px;
   right:0;
-  border-left:1px solid rgba(0,0,0,0);
+  border-left:1px solid rgba(0,0,0,0.6);
   transition:0.7s ease-in-out;
 }
 
@@ -129,17 +127,10 @@ ul {
   top:10px;
   width:80px;
 
-  /* six links
-  top:15px;
-  height:69px;
-  */
-
   height:75px;
 
   overflow:hidden;
   transition:0.3s ease-in-out;
-  opacity:0;
-  visibility:hidden;
 }
 
 .links a {
@@ -149,12 +140,6 @@ ul {
   font-family: 'Courier';
   font-size:10px;
   color:#666;
-  
-  /* six links
-  width:30px;
-  height:30px;
-  line-height:30px;
-  */
 
   width: 35px;
   height:35px;
@@ -198,7 +183,7 @@ ul {
   text-transform:lowercase;
   text-align:center;
   font-weight: bold;
-  color:rgba(0,0,0,0);
+  color:rgba(0,0,0,1);
   -webkit-transition: ease-in 0.5s;
 }
 
@@ -212,8 +197,7 @@ ul {
 
 
 .spinning {
-  animation: spin 4s  ease-in-out; /*forwards infinite
-  -webkit-animation-play-state: running;*/
+  -webkit-animation-play-state: running;
   transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg );
 }
 
@@ -235,7 +219,8 @@ ul {
 
 #cube { transition: transform 1s; }
 
-
+/*
 .container:hover .spinning {
   -webkit-animation-play-state: paused;
 }
+*/
